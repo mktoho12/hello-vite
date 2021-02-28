@@ -1,8 +1,13 @@
 <template lang="pug">
 form(@submit.prevent="createUserWithEmailAndPassword")
-  input(v-model="email" type="email" placeholder="Eメールアドレス" autocomplete="email")
-  input(v-model="password" type="password" placeholder="パスワード" autocomplete="password")
-  button アカウント作成
+  label
+    p メールアドレス
+    input(v-model="email" type="email" autocomplete="email")
+  label
+    p パスワード
+    input(v-model="password" type="password" autocomplete="password")
+  div
+    button アカウント作成
 </template>
 
 <script lang="ts">
@@ -25,3 +30,6 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+</style>
